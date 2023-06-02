@@ -72,13 +72,14 @@ function App() {
 
   return (
     <>
-      <div className="w-full  justify-center p-8">
+      <div className="w-full  justify-center p-4">
         <textarea
           className="textarea rounded-sm w-full bg-gray-200"
           placeholder="Give kudos to your partners, you can generate by command input bellow"
           value={prompt}
           style={{ height: 280}}
           onChange={(e) => setPrompt(e.target.value)}  
+          disabled={loading}
         />
         <input
           type="text"
