@@ -2,8 +2,8 @@ import { useCallback, useEffect, useState } from "react";
 import { Configuration, OpenAIApi } from "openai";
 
 function App() {
-  const configuration = new Configuration({
-    apiKey: "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",
+ const configuration = new Configuration({
+    apiKey: process.env.REACT_APP_OPENAI_API_KEY,
   });
   const openai = new OpenAIApi(configuration);
  
